@@ -13,4 +13,9 @@ class Acquisition (models.model):
   acquiree = models.ForeignKey(Company)
   amount = models.IntegerField()
 
-class Funding (models.model)
+class Funding (models.model):
+  funding_date = models.DateTimeField()
+  company = models.ForeignKey(Company)
+  investing_entity = models.CharField(max_length=256)
+  amount = models.IntegerField()
+  stage = models.Cha
